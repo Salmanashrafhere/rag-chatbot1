@@ -1,0 +1,5 @@
+Course Policy (Sample):
+- Late submissions lose 10% per day.
+- Collaboration is allowed for brainstorming, not for sharing code.
+- Cite all external sources used.
+- Final demo must include a working interface and show retrieved sources.
