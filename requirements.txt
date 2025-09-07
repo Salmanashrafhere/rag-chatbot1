@@ -1,0 +1,7 @@
+streamlit
+chromadb==0.4.22
+sentence-transformers
+transformers
+torch
+pypdf
+numpy
