@@ -6,7 +6,7 @@ from typing import List, Dict, Tuple
 
 import numpy as np
 import chromadb
-from chromadb import PersistentClient
+from chromadb import Client
 from sentence_transformers import SentenceTransformer
 from pypdf import PdfReader
 
@@ -56,7 +56,8 @@ def build_or_load_index(
 ) -> Tuple[chromadb.api.models.Collection.Collection, SentenceTransformer]:
     """Build Chroma index if empty; otherwise load existing. Returns (collection, emb_model)."""
     os.makedirs(persist_dir, exist_ok=True)
-    client = PersistentClient(path=persist_dir)
+    client = Client()
+
     try:
         col = client.get_collection(collection_name)
     except Exception:
